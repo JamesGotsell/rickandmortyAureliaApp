@@ -1,0 +1,13 @@
+
+<template>
+    <!-- <require from='./wrapper/wrapper'></require> -->
+  <h1>${message}</h1>
+  <header>
+    <ul class="nav navbar-nav">
+        <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
+          <a href.bind="row.href">${row.title}</a>
+        </li>
+      </ul>
+</header>
+  <router-view></router-view>
+</template>
